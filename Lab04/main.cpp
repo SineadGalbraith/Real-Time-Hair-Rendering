@@ -316,7 +316,7 @@ void updateScene() {
 void init()
 {
 	// Set up the shaders
-	shaderProgram = CompileShaders("./shaders/simpleVertexShader", "./shaders/simpleFragmentShader");
+	shaderProgram = CompileShaders("./shaders/simpleVertexShader.txt", "./shaders/simpleFragmentShader.txt");
 	// load mesh into a vertex buffer array
 	generateObjectBufferMesh();
 
