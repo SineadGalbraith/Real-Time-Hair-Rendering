@@ -1,3 +1,4 @@
 *.VC.opendb
 .vs/
 build/
+libs/
