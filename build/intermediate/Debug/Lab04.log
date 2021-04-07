@@ -1,9 +1,0 @@
-﻿  Model.cpp
-  main.cpp
-c:\users\sgal\documents\5th year\cs7gv3 - real-time rendering\assignments\assignments\assignment 6\lab 04 - sample object hierarchy\lab04\main.cpp(163): warning C4018: '<': signed/unsigned mismatch
-c:\users\sgal\documents\5th year\cs7gv3 - real-time rendering\assignments\assignments\assignment 6\lab 04 - sample object hierarchy\lab04\main.cpp(155): warning C4101: 'height': unreferenced local variable
-c:\users\sgal\documents\5th year\cs7gv3 - real-time rendering\assignments\assignments\assignment 6\lab 04 - sample object hierarchy\lab04\main.cpp(155): warning C4101: 'nrChannels': unreferenced local variable
-c:\users\sgal\documents\5th year\cs7gv3 - real-time rendering\assignments\assignments\assignment 6\lab 04 - sample object hierarchy\lab04\main.cpp(155): warning C4101: 'width': unreferenced local variable
-c:\users\sgal\documents\5th year\cs7gv3 - real-time rendering\assignments\assignments\assignment 6\lab 04 - sample object hierarchy\lab04\main.cpp(156): warning C4101: 'data': unreferenced local variable
-  Generating Code...
-  Lab04.vcxproj -> C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\\build\executables\Debug\Lab 04.exe
