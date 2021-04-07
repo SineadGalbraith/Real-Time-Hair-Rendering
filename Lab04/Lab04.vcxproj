@@ -56,10 +56,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\freeglut\include;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\glew-1.10.0\include;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\glm;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\freeglut\include;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\glew-1.10.0\include;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\freeglut\lib;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\glew-1.10.0\lib\Release\Win32;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\assimp\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\glm;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\freeglut\lib;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\glew-1.10.0\lib\Release\Win32;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\assimp\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;freeglut.lib;glew32.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -70,21 +70,23 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\freeglut\include;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\glew-1.10.0\include;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\glm;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\freeglut\include;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\glew-1.10.0\include;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\freeglut\lib;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\glew-1.10.0\lib\Release\Win32;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\assimp\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\glm;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\freeglut\lib;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\glew-1.10.0\lib\Release\Win32;C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Assignments\Assignment 6\Lab 04 - Sample Object Hierarchy\libs\assimp\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;freeglut.lib;glew32.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="maths_funcs.cpp" />
+    <ClCompile Include="Model.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="maths_funcs.h" />
+    <ClInclude Include="Model.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
