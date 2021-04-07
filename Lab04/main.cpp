@@ -186,14 +186,6 @@ void generateObjectBufferMesh(std::vector < ModelData > dataArray) {
 }
 #pragma endregion VBO_FUNCTIONS
 
-void generateModels() {
-	Model bear_data(BEAR_MESH);
-
-	meshData = model.getDataArray();
-
-	generateObjectBufferMesh(meshData);
-}
-
 void display() {
 
 	// tell GL to only draw onto a pixel if the shape is closer to the viewer
@@ -242,13 +234,21 @@ void updateScene() {
 	glutPostRedisplay();
 }
 
+void createHair(ModelData model) {
+
+}
 
 void init()
 {
 	// Set up the shaders
 	plainShaderProgram = CompileShaders("./shaders/plainVertexShader.txt", "./shaders/plainFragmentShader.txt");
 	// load mesh into a vertex buffer array
-	generateModels();
+	Model bear_data(BEAR_MESH);
+	meshData = model.getDataArray();
+	generateObjectBufferMesh(meshData);
+
+	// Create "hairs" from each of the vertices within the mesh
+	createHair(meshData[0]);
 
 }
 
