@@ -16,6 +16,10 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+// Loading photos
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
+
 // Model include
 #include "Model.h"
 Model model;
@@ -32,7 +36,8 @@ using namespace std;
 
 std::vector < ModelData > meshData;
 const int i = 3;
-GLuint VAO[i], VBO[i * 3];
+GLuint VAO[i], VBO[i * 3], VTO[i];
+glm::mat4 bearModel = glm::mat4(1.0f);
 
 unsigned int mesh_vao = 0;
 int width = 800;
@@ -186,6 +191,34 @@ void generateObjectBufferMesh(std::vector < ModelData > dataArray) {
 }
 #pragma endregion VBO_FUNCTIONS
 
+#pragma region HAIR_FUNCTIONS
+
+void loadTexture(const char* texture, int i) {
+	glGenTextures(1, &VTO[i]);
+	int width, height, nrComponents;
+	unsigned char *data = stbi_load(texture, &width, &height, &nrComponents, 0);
+
+	GLenum format;
+	if (nrComponents == 1)
+		format = GL_RED;
+	else if (nrComponents == 3)
+		format = GL_RGB;
+	else if (nrComponents == 4)
+		format = GL_RGBA;
+
+	glBindTexture(GL_TEXTURE_2D, VTO[i]);
+	glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+	glGenerateMipmap(GL_TEXTURE_2D);
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+	stbi_image_free(data);
+}
+#pragma endregion HAIR_FUNCTIONS
+
 void display() {
 
 	// tell GL to only draw onto a pixel if the shape is closer to the viewer
@@ -203,19 +236,18 @@ void display() {
 	// Bear Model
 	glBindVertexArray(VAO[0]);
 
-	glm::mat4 model = glm::mat4(1.0f);
-	model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+	bearModel = glm::translate(bearModel, glm::vec3(0.0f, 0.0f, 0.0f));
 
 	// update uniforms & draw
 	glUniformMatrix4fv(glGetUniformLocation(plainShaderProgram, "proj"), 1, GL_FALSE, glm::value_ptr(proj));
 	glUniformMatrix4fv(glGetUniformLocation(plainShaderProgram, "view"), 1, GL_FALSE, glm::value_ptr(view));
-	glUniformMatrix4fv(glGetUniformLocation(plainShaderProgram, "model"), 1, GL_FALSE, glm::value_ptr(model));
-	std::cout << "HERE" << std::endl;
+	glUniformMatrix4fv(glGetUniformLocation(plainShaderProgram, "model"), 1, GL_FALSE, glm::value_ptr(bearModel));
+
 	glDrawArrays(GL_TRIANGLES, 0, meshData[0].mPointCount);
 
+	glEnable(GL_BLEND);
 	glutSwapBuffers();
 }
-
 
 void updateScene() {
 
@@ -234,7 +266,7 @@ void updateScene() {
 	glutPostRedisplay();
 }
 
-void createHair(ModelData model) {
+void createHair() {
 
 }
 
@@ -246,10 +278,6 @@ void init()
 	Model bear_data(BEAR_MESH);
 	meshData = model.getDataArray();
 	generateObjectBufferMesh(meshData);
-
-	// Create "hairs" from each of the vertices within the mesh
-	createHair(meshData[0]);
-
 }
 
 // Placeholder code for the keypress
