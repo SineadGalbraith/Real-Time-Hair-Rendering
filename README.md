@@ -6,6 +6,8 @@ My project has taken inspiration from a paper named Real-Time Hybrid Hair Render
 
 The result of this project allows hair to be rendered on simple shapes. The number of segments per strand of hair and the segment length can be specified before run-time to adjust the appearance of the hair within the program.
 
+C/C++ and OpenGL have been used for this assignment.
+
 ## Video Demo
 A video demonstration of this assignment can be found at: https://youtu.be/fRkMm5ZdJDg
 
